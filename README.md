@@ -4,7 +4,7 @@ This is an example of how to configure the MPU of the ARM-Cortex-M embedd on STM
 
 # How this example do?
 We use the user button (the blu one) for switching the MPU configuration on the led memory area( GPIOD )for blinking or not the 4 leds.
-In particular when the button is pressed, an interrupt is generated and managed by the callback HAL_GPIO_EXTI_Callback(), in which changed the permissions of the area in: Read only or Read/Write.
+In particular when the button is pressed, an interrupt is generated and managed by the callback HAL_GPIO_EXTI_Callback(), in which change the permissions of the area in: Read only or Read/Write.
 
 # How to works?
 
