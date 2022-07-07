@@ -10,6 +10,7 @@ In particular when the button is pressed, an interrupt is generated and managed 
 
 # ./main_MPU.c
 1)The MPU configures in Read/write the GPIOD's area that starting from the address: 0x40020C00 and have 1KB size.
+
 2)a while in which toggle the 4 LEDs 
 
 # ./main_lib.c
