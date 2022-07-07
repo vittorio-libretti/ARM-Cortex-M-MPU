@@ -8,15 +8,15 @@ In particular when the button is pressed, an interrupt is generated and managed 
 
 # How to works?
 
-# -------main_MPU.c
+# ./main_MPU.c
 1)The MPU configures in Read/write the GPIOD's area that starting from the address: 0x40020C00 and have 1KB size.
 2)a while in which toggle the 4 LEDs 
 
-# -------main_lib.c
+# ./main_lib.c
 3) Pushing one time the user button the HAL_GPIO_EXTI_Callback() implementation is call and change the permissions in Read Only
 
-# -------stm32f4xx_it.c
+# ./stm32f4xx_it.c
 4) Since we no longer have permits to write the LEDs, the MemManage_Handler() is raised to handle this  exception fault.
 
-# -------main_lib.c
+# ./main_lib.c 
 5) Pushing another time the button the HAL_GPIO_EXTI_Callback() implementation is call and change the permissions in Read/write, and LEDs start blinking from where they had stopped.
