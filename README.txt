@@ -75,7 +75,7 @@ p/x *(unsigned int*) 0xE000ED34     MemManage Fault Address Register-> contiene 
 
 p/x *(unsigned int*) 0xE000ED28     Configurable Fault Status Register -> indica la causa del MemManage Fault ->0x82-> 0101 0010-> solo il bit[1]=1 è importante. Indica che la causa è che il processore sta cercando di memorizzare in un'area senza i permessi di scrittura.
 
-                                                                                       blu,  red,  Orange, green
+                                                                                       blu,  red,  orange, green
 p/x *(unsigned long*) 0x40020C10    legge il registro GPIODxIDR (gli ultimi 4 bit sono PD15, PD14, PD13  , PD12)
 
 
