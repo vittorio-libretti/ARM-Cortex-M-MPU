@@ -70,10 +70,10 @@ c
 4) A questo punto: la MPU viene riconfigurata, quindi alla prossima scrittura sul LED, la MPU lancia un'eccezione e l'handler MemManage_handler viene invocato. In questo momento il programma si blocca per la presenza del breakpoint.
 In questo momento si può indagare la memoria per approfondire la causa dell'eccezione tramite i seguenti comandi:
 
-p/x *(unsigned int*) 0xE000ED34
 
-p/x *(unsigned int*) 0xE000ED28
+p/x *(unsigned int*) 0xE000ED34     MemManage Fault Address Register-> contiene l'indirizzo della locazione che ha generato il MemManage Fault è un registro ARM
 
+p/x *(unsigned int*) 0xE000ED28     Configurable Fault Status Register -> indica la causa del MemManage Fault ->0x82-> 0101 0010-> solo il bit[1]=1 è importante. Indica che la causa è che il processore sta cercando di memorizzare in un'area senza i permessi di scrittura.
 
-
-
+                                                                                       blu,  red,  Orange, green
+p/x *(unsigned long*) 0x40020C10    legge il registro GPIODxIDR (gli ultimi 4 bit sono PD15, PD14, PD13  , PD12)
