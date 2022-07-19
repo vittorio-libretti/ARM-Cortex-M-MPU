@@ -77,3 +77,5 @@ p/x *(unsigned int*) 0xE000ED28     Configurable Fault Status Register -> indica
 
                                                                                        blu,  red,  Orange, green
 p/x *(unsigned long*) 0x40020C10    legge il registro GPIODxIDR (gli ultimi 4 bit sono PD15, PD14, PD13  , PD12)
+
+
