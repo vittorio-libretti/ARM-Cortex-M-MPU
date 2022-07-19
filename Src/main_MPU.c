@@ -10,8 +10,8 @@
 
 // Funzione main
 /* Il main comprende un esempio di configurazione ed utilizzo della MPU, 
- * mostrato tramite l'uso di un LED e del pulsante User Button. Il main è 
- * suddiviso nelle seguenti parti:
+ * mostrato tramite l'uso dei 4 LED e del pulsante User Button.  
+ * Il main è suddiviso nelle seguenti parti:
  *  - inizializzazione programma;
  *  - operazioni preliminari alla configurazione della MPU;
  *  - configurazione MPU;
